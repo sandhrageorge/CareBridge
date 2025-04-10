@@ -1,0 +1,13 @@
+<div class="max-w-5xl mx-auto mt-4 lg:p-12 p-4 grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-4 relative z-20">
+  <div class="lg:col-span-12 text-center">
+    <% if user_signed_in? %>
+    <p>Hello, <%= current_user.email %>!</p>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "text-blue-500" %>
+    <% else %>
+    <%= link_to 'Login', new_user_session_path, class: "text-blue-500" %>
+    <% end %>
+  <p class="leading-snug text-gray-700 text-lg max-w-3xl mx-auto pb-6">Welcome to Care Bridge Application</p>
+</div>
+
+
+</div>
