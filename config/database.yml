@@ -22,7 +22,12 @@ default: &default
 
 development:
   <<: *default
-  database: care_bridge_development
+  adapter: postgresql
+  database: care_bridge_dev
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+  host: <%= ENV['PG_ADDR'] %>
+  port: <%= ENV['PG_PORT'] %>
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
